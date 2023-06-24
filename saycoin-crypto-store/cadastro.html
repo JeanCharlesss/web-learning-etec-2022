@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logo.png" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>SayCoin</title>
+</head>
+<body>
+  
+    <header>
+        <nav class="navbar navbar-dark bg-light">
+          <a class="navbar-brand text-dark" href="#">
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" id="logo">
+            SayCoin
+          </a>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active ">
+                  <a class="nav-link " href="index.html">Menu <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="catalogo.html">Cátalogo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="comprar.html">Comprar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#ModalMensal" href="comprar.html">Contato</a>
+              </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#ModalLogin" >
+                    Login
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#"></a>
+                </li>
+              </ul>
+            </div>
+            </nav>
+          </nav>
+          </header>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Cadastre-se</h5>
+              <p class="card-text">Conclua sua compra preenchendo os campos abaixo.</p>
+            </div>
+          </div>
+<!-- Main -->
+<main id="main1">
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Digite seu nome completo</span>
+    <input type="text" class="form-control" placeholder="Usuário" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon2">Digite seu email</span>
+    <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  </div>
+  
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon3">Digite sua senha</span>
+    <input type="text" class="form-control" placeholder="Senha" id="basic-url" aria-describedby="basic-addon3">
+  </div>
+  
+  <div class="input-group mb-3">
+    <span class="input-group-text">Digite o número do seu cartão</span>
+    <input type="text" class="form-control" placeholder="Número do cartão" aria-describedby="basic-addon4">
+  </div>
+  
+  <div class="input-group mb-3">
+    <span class="input-group-text">Digite seu CPF</span>
+    <input type="text" class="form-control" placeholder="CPF" aria-describedby="basic-addon5">
+    <span class="input-group-text">Digite seu RG</span>
+    <input type="text" class="form-control" placeholder="RG" aria-describedby="basic-addon6">
+  </div>
+  
+  <div class="input-group">
+    <span class="input-group-text">Digite seu número de telefone</span>
+    <input type="text" class="form-control" placeholder="Telefone" aria-describedby="basic-addon7">
+  </div>
+
+<div class="form-check" id="checkbox">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Deseja receber mensagem por SMS?
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Deseja receber mensagem por Email?
+  </label>
+</div>
+
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ModalConfirmacao" id="finalizar">
+    Finalizar
+  </button>
+              <!-- Modal Confirmacao  -->
+              <div class="modal fade" id="ModalConfirmacao" tabindex="-1" aria-labelledby="Bitcoin" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Verificação</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <p>Confirmar cadastro de compra?<br>
+                    </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalFinal" >
+                        Comprar
+                      </button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  <!-- Modal Cadastro -->
+  <div class="modal fade" id="ModalFinal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Compra realizada !!!</h5>
+          <div class="modal-body">
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+            <a href="index.html">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Voltar</button>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>

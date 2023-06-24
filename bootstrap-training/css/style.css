@@ -1,0 +1,13 @@
+.carousel-inner {
+}
+.w-100 {
+   width: 70%!important;
+   margin-top: 15px;
+}
+body {
+    position: relative;
+    background-image: url(../img/backgroundbody.jpg);
+}
+.btn btn-primary btn-lg {
+    border-radius: 30px;
+}

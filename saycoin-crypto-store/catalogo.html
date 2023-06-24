@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logo.png" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>SayCoin</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-light">
+      <a class="navbar-brand text-dark" href="#">
+        <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" id="logo">
+        SayCoin
+      </a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Menu <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html">Cátalogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comprar.html">Comprar</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#ModalMensal" href="comprar.html">Contato</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#ModalLogin" >
+                Login
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </nav>
+  </header>
+
+      <!-- Main -->
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Seja bem-vindo</h5>
+          <p class="card-text">Veja as 6 principais moedas do mercado, descubra a qual se encaixe melhor com você.</p>
+        </div>
+      </div>
+      <div>
+      <div class="card" style="width: 18rem;" id="card1">
+        <img class="card-img-top" src="img/bitcoin2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Bitcoin</h5>
+          <p class="card-text"> 
+            <b>Bancos</b> e <b>governos</b> protegem o seu dinheiro de <b>imprevistos</b>.<br> O Bitcoin protege seu dinheiro dos três
+          </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalBitcoin" >
+            Mais
+          </button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="card2">
+        <img class="card-img-top" src="img/monero.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Monero</h5>
+          <p class="card-text"> Se você diz não se importar com a <b>privacidade</b>, <br>
+            talvez você não se importe em <b>não-ser livre.</b>
+          </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalMonero" data-bs-whatever="b">
+            Mais
+          </button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="card3">
+        <img class="card-img-top" src="img/etherium.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Ethereum</h5>
+          <p class="card-text"><b>Descentralizar</b> o dinheiro do <b>sistema</b> é a meta, antes que o sistema decentralize o dinheiro de <b>você</b></p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEthereum">
+            Mais
+          </button>
+      </div>
+    </div>
+
+      <div class="card" style="width: 18rem;" id="card4">
+        <img class="card-img-top" src="img/dogecoin.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Dogecoin</h5>
+          <p class="card-text"> Porque a Dogecoin? Nada mais vale do que um <b>espírito</b> <b>alegre</b> e <br>
+            <b>divertido</b><br><br></p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalDogecoin">
+              Mais
+            </button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="card5">
+        <img class="card-img-top" src="img/fathercoin.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Feathercoin</h5>
+          <p class="card-text"> É uma <b>pena</b> ver o sistema se <b>desmoralizando</b>, afinal é uma <b>PENA.</b><br><br></p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalFeathercoin">
+            Mais
+          </button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="card6">
+        <img class="card-img-top" src="img/litecoin.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Litecoin</h5>
+          <p class="card-text"> <b>Litecoin</b>, na verdade, é mais <b>perigoso</b> não ter sequer um <b>pouco</b>...<br><br></p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalLitecoin">
+            Mais
+          </button>
+          </div>
+       </div>
+      <br>
+      <br>
+      <!-- Modais -->
+      <!-- Modal Bitcoin -->
+      <div class="modal fade" id="ModalBitcoin" tabindex="-1" aria-labelledby="Bitcoin" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Bitcoin</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Atualmete o Bitcoin está valendo R$ 100.232,39 , por mais que nós últimos dias tenha demonstrado um pequena queda
+              ainda é uma moeda de confiaça e de boa rentabilidade que pode ser usada em quase todo mundo.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalLogin" >
+                Log-in
+              </button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- Modal Monero -->
+  <div class="modal fade" id="ModalMonero" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Monero</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          O Monero é uma otima moeda, atualmente custando R$ 568,04 , tem mantido uma otima constância no mercado.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalLogin" >
+            Log-in
+          </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Ethereum-->
+  <div class="modal fade" id="ModalEthereum" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ethereum</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          A Ethereum está custando R$5,104 atualmente, tem roubando muitos fãs com sua rede de segurança e privacidade
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalLogin" >
+            Log-in
+          </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal DodgeCoin-->
+  <div class="modal fade" id="ModalDogecoin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Dogecoin</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Atualmete o Dogecoin está custando R$ 0,30 e apresentou um subida brusca nós último dias o que 
+          pode ser bom sinal para suas vendas.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalLogin" >
+            Log-in
+          </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal feathercoin -->
+<div class="modal fade" id="ModalFeathercoin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Feathercoin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        O preço atual é de R$ 0,032 por um Feathercoin e está 99,57% abaixo da máxima histórica de R$ 7,47.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalLogin" >
+          Log-in
+        </button></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Litecoin-->
+          <div class="modal fade" id="ModalLitecoin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Litecoin</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 O litecoin está valendo R$ 261,92 e é uma moeda com visão otimista no mercado,
+                 tendo uma elevação muito positiva para seu investimento.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalLogin" >
+                    Log-in
+                  </button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+ <!-- Modal Login -->
+ <div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Log-in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/userlogin.png" alt="" id="userlogin">
+        <br>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon2">Email</span>
+          <input type="text" class="form-control" placeholder="@exemplo.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        </div>
+        
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Senha</span>
+          <input type="text" class="form-control" placeholder="mínimo 8 caracteres*" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+          <input type="checkbox" class="custom-control-input" id="customControlInline">
+          <label class="custom-control-label" for="customControlInline">Lembrar senha?</label>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="comprar.html"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalBitcoin" >
+          Entrar
+        </button></a>
+      </div>
+    </div>
+  </div>
+</div>
+   <!-- Modal Mensal-->
+   <div class="modal fade" id="ModalMensal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Oops...</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <H4>Equipe SayCoin</H4>
+          <p> Para ter acesso à nossa equipe você precisa ter o passe de Mensalidade ;(</p>
+              Fique por dentro das novidades do mercado, tenha acesso à uma equipe exclusiva responsável por te ajudar em seus investimentos,
+              saiba quando comprar, quando vender, e fique atento a qualquer oportunidade.<br>
+              Tire suas dúvidas com os melhores especialistas em criptomoedas agora!
+          </p>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <a href="mensal.html"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalBitcoin" >
+            Comprar
+          </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+    <!-- Copyright / Footer-->
+    <footer class="bg-secondary text-center text-white">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright :
+      <a class="text-white" href="https://mdbootstrap.com/">www.SayCoin.com.br</a>
+    </div>
+  </footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

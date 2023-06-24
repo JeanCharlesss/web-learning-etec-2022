@@ -1,0 +1,196 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 17-Out-2022 às 22:12
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.0.13
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `bdfullstack`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbcategoria`
+--
+
+CREATE TABLE `tbcategoria` (
+  `idCategoria` int(11) NOT NULL,
+  `nomeCategoria` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbcliente`
+--
+
+CREATE TABLE `tbcliente` (
+  `idCliente` int(11) NOT NULL,
+  `nomeCliente` varchar(20) NOT NULL,
+  `cpfCliente` char(11) NOT NULL,
+  `emailCliente` varchar(40) NOT NULL,
+  `senhaCliente` varchar(10) NOT NULL,
+  `logradouroCliente` varchar(20) NOT NULL,
+  `numlogCliente` varchar(20) NOT NULL,
+  `compCliente` varchar(20) NOT NULL,
+  `bairroCliente` varchar(20) NOT NULL,
+  `cidadeCliente` varchar(20) NOT NULL,
+  `ufCliente` char(3) NOT NULL,
+  `cepCliente` char(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbitemvenda`
+--
+
+CREATE TABLE `tbitemvenda` (
+  `idItemsVenda` int(11) NOT NULL,
+  `idVenda` int(11) DEFAULT NULL,
+  `idProduto` int(11) DEFAULT NULL,
+  `qtdeitemsVenda` int(11) NOT NULL,
+  `subTotalitemsvenda` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbproduto`
+--
+
+CREATE TABLE `tbproduto` (
+  `idProduto` int(11) NOT NULL,
+  `nomeProduto` varchar(90) NOT NULL,
+  `precoProduto` float NOT NULL,
+  `descProduto´ varchar(120) NOT NULL,
+  `fotoProduto` varchar(120) NOT NULL,
+  `idCategoria` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbvenda`
+--
+
+CREATE TABLE `tbvenda` (
+  `idVenda` int(11) NOT NULL,
+  `dataVenda` date NOT NULL,
+  `valorTotalVenda` double NOT NULL,
+  `idCliente` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `tbcategoria`
+--
+ALTER TABLE `tbcategoria`
+  ADD PRIMARY KEY (`idCategoria`);
+
+--
+-- Índices para tabela `tbcliente`
+--
+ALTER TABLE `tbcliente`
+  ADD PRIMARY KEY (`idCliente`);
+
+--
+-- Índices para tabela `tbitemvenda`
+--
+ALTER TABLE `tbitemvenda`
+  ADD PRIMARY KEY (`idItemsVenda`),
+  ADD KEY `idVenda` (`idVenda`),
+  ADD KEY `idProduto` (`idProduto`);
+
+--
+-- Índices para tabela `tbproduto`
+--
+ALTER TABLE `tbproduto`
+  ADD PRIMARY KEY (`idProduto`),
+  ADD KEY `idCategoria` (`idCategoria`);
+
+--
+-- Índices para tabela `tbvenda`
+--
+ALTER TABLE `tbvenda`
+  ADD PRIMARY KEY (`idVenda`),
+  ADD KEY `idCliente` (`idCliente`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `tbcategoria`
+--
+ALTER TABLE `tbcategoria`
+  MODIFY `idCategoria` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `tbcliente`
+--
+ALTER TABLE `tbcliente`
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `tbitemvenda`
+--
+ALTER TABLE `tbitemvenda`
+  MODIFY `idItemsVenda` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `tbproduto`
+--
+ALTER TABLE `tbproduto`
+  MODIFY `idProduto` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `tbvenda`
+--
+ALTER TABLE `tbvenda`
+  MODIFY `idVenda` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `tbitemvenda`
+--
+ALTER TABLE `tbitemvenda`
+  ADD CONSTRAINT `tbitemvenda_ibfk_1` FOREIGN KEY (`idVenda`) REFERENCES `tbvenda` (`idVenda`),
+  ADD CONSTRAINT `tbitemvenda_ibfk_2` FOREIGN KEY (`idProduto`) REFERENCES `tbproduto` (`idProduto`);
+
+--
+-- Limitadores para a tabela `tbproduto`
+--
+ALTER TABLE `tbproduto`
+  ADD CONSTRAINT `tbproduto_ibfk_1` FOREIGN KEY (`idCategoria`) REFERENCES `tbcategoria` (`idCategoria`);
+
+--
+-- Limitadores para a tabela `tbvenda`
+--
+ALTER TABLE `tbvenda`
+  ADD CONSTRAINT `tbvenda_ibfk_1` FOREIGN KEY (`idCliente`) REFERENCES `tbcliente` (`idCliente`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
